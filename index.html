@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Radio - CMSK</title>
+    <link rel="icon" href="/image/CMSK/favicon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/style/all.css">
+    <link rel="stylesheet" href="/style/background.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="/script/all.js"></script>
+    <!-- <script src="/script/qrcode.js"></script>
+    <script src="https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/script/media-player.js"></script> -->
+    <style>
+        body {
+            background-image: url("https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/image/background/37de93df07816b23a7a203042f0de634ee6b017b94c39f213b85db626f0c4a91.png");
+        }
+    </style>
+</head>
+
+<body>
+    <!-- noscript -->
+    <noscript class="noscript">
+        <h2 class="noscript">
+            你的浏览器不支持或未启用JavaScript
+            <br>
+            请启用JavaScript后重新加载页面
+            <br>
+            <br>
+            <br>
+            <a id="help-javascript"
+                href="https://support.microsoft.com/zh-cn/office/%E5%90%AF%E7%94%A8-javascript-7bb9ee74-6a9e-4dd1-babf-b0a1bb136361">
+                获取更多帮助
+            </a>
+            <style>
+                #help-javascript {
+                    font-size: 17px;
+                    color: black;
+                    border: 5px solid red;
+                    border-radius: 5px;
+                }
+
+                #help-javascript:hover {
+                    color: rgb(0, 255, 0);
+                }
+            </style>
+            <div class="noscript-link">
+                Powered&nbsp;by
+                <a href="https://github.com/MSK-10032" target="_blank">
+                    <image src="https://avatars.githubusercontent.com/MSK-10032" class="noscript-avatar">
+                        <span class="MC">
+                            CMSK
+                        </span>
+                </a>
+            </div>
+            <span class="copyright">
+                <b>
+                    Copyright&copy;&nbsp;by
+                    <a href="https://github.com/MSK-10032" target="_blank" class="MC">
+                        CMSK
+                    </a>
+                    . All Right Reserved
+                </b>
+            </span>
+        </h2>
+        <style>
+            @font-face {
+                font-family: 'MC';
+                src: url('/font/MC.font');
+            }
+
+            .noscript {
+                user-select: none;
+                position: fixed;
+                text-align: center;
+                z-index: 114514;
+                background-color: rgb(50, 50, 50);
+                color: white;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .noscript a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .noscript-link {
+                margin-top: 50px;
+            }
+
+            .noscript-avatar {
+                background-color: black;
+                width: 20px;
+                border-radius: 50%;
+                margin-bottom: -2px;
+
+            }
+
+            .copyright {
+                font-size: 15px;
+            }
+
+            .MC {
+                font-family: 'MC';
+            }
+        </style>
+    </noscript>
+    <!-- background -->
+    <div id="gbg"></div>
+    <!-- main -->
+    <main>
+        <div id="call_sign">B*4***</div>
+        <div id="qsl_card">
+            <div id="qsl_card_title">My QSL Card</div>
+            <div id="qsl_card_view">
+                <iframe id="qsl_card_iframe" src="/QSL/"></iframe>
+            </div>
+            <style>
+                #qsl_card_title {
+                    font-size: 3em;
+                    font-weight: lighter;
+                    text-align: center;
+                    color: white;
+                }
+
+                #qsl_card_iframe {
+                    width: 100%;
+                    height: 35rem;
+                    border: none;
+                }
+            </style>
+        </div>
+        <style>
+            #call_sign {
+                font-size: 10vw;
+            }
+        </style>
+    </main>
+    <!-- footer -->
+    <footer>
+        <hr>
+        <copyright>
+            Copyright&copy;&nbsp;
+            <script>document.write(`${new Date().getFullYear()}&nbsp;`);</script>
+            <a href="https://github.com/MSK-10032/" target="_blank">CMSK.</a>&nbsp;All&nbsp;rights&nbsp;reserved.
+        </copyright>
+        <hr>
+        <style>
+            footer {
+                color: white;
+                text-align: center;
+            }
+
+            footer copyright {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            footer copyright a {
+                color: white;
+                text-decoration: none;
+                font-family: "MC";
+            }
+        </style>
+    </footer>
+</body>
+
+</html>
