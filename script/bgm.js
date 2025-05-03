@@ -53,11 +53,11 @@ function toggleBGM() {
 
 function updateBGMButton() {
     if (bgm.paused) {
-        playButton.style.display = "flex";
+        playButton.style.display = "";
         pauseButton.style.display = "none";
     } else {
         playButton.style.display = "none";
-        pauseButton.style.display = "flex";
+        pauseButton.style.display = "";
     }
 }
 
