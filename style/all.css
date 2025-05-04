@@ -11,3 +11,10 @@
 strong {
     color: red;
 }
+
+html,
+body {
+    color: #fff;
+    font-weight: lighter;
+    font-family: 'Microsoft YaHei Light', sans-serif;
+}
