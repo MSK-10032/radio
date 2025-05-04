@@ -15,7 +15,7 @@
 
 <body>
     <!--loading-->
-    <div id="loading">
+    <div id="loading" title="Loading...">
         <img class="loading" src="https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/image/loading/default.gif" alt="loading">
         <style>
             #loading {
@@ -43,10 +43,10 @@
         <div class="card-container">
             <div class="card">
                 <div class="card-front">
-                    <img alt="QSL Card Front Image">
+                    <img alt="QSL Card Front Image" title="QSL Card Front Image">
                 </div>
                 <div class="card-back">
-                    <img alt="QSL Card Back Image">
+                    <img alt="QSL Card Back Image" title="QSL Card Back Image">
                 </div>
             </div>
         </div>
@@ -109,15 +109,17 @@
         var qcip = 'https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/image/other/ham/qsl/style-',
             cid = Number(location.search.replace(/^\?/, '')),
             qc_f = document.querySelector('.card-front img'),
-            qc_b = document.querySelector('.card-back img'),
-            dl_bg = document.querySelector('.card');
+            qc_b = document.querySelector('.card-back img');
         if (cid === 0) {
             cid = 1
         }
         qc_f.src = `${qcip}${cid}/i.png`;
         qc_b.src = `${qcip}${cid}/o.png`;
-        dl_bg.onclick = function () {
-            window.open(`${qcip}${cid}/background.png`, '_blank');
+        qc_f.onclick = function () {
+            window.open(`${qcip}${cid}/i.png`, '_blank');
+        };
+        qc_b.onclick = function () {
+            window.open(`${qcip}${cid}/o.png`, '_blank');
         };
     </script>
     <style>
