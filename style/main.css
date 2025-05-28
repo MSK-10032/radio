@@ -53,3 +53,7 @@ a:hover {
 p {
     text-indent: 2em;
 }
+
+p.link {
+    text-indent: 0;
+}
