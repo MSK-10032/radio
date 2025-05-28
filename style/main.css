@@ -23,3 +23,13 @@ main {
     width: 100%;
     height: max-content;
 }
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
