@@ -62,3 +62,7 @@ hr.ch {
     width: 80%;
     color: #fff;
 }
+
+#callsign+style+hr {
+    width: 99%;
+}
