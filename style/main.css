@@ -57,3 +57,8 @@ p {
 p.link {
     text-indent: 0;
 }
+
+hr.ch {
+    width: 80%;
+    color: #fff;
+}
