@@ -39,9 +39,6 @@ const bgm = document.querySelector("#cmsk_bgm audio");
 const playButton = document.querySelector("#cmsk_bgm .bgm_play");
 const pauseButton = document.querySelector("#cmsk_bgm .bgm_pause");
 
-bgm.play();
-updateBGMButton();
-
 function toggleBGM() {
     if (bgm.paused) {
         bgm.play();
@@ -63,3 +60,6 @@ function updateBGMButton() {
 
 bgm.addEventListener("play", updateBGMButton);
 bgm.addEventListener("pause", updateBGMButton);
+
+bgm.play();
+updateBGMButton();
