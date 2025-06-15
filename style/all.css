@@ -8,7 +8,9 @@
     color: black;
 }
 
-strong {
+strong,
+* strong {
+    font-weight: bolder;
     color: red;
 }
 
