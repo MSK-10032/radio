@@ -31,7 +31,7 @@ document.querySelector('body').insertAdjacentHTML('beforeend', `
                 padding: 0;
             }
         </style>
-        <audio src="https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/audio/level5_-judgelight-.m4a" autoplay loop></audio>
+        <audio src="https://御坂网络-1.御坂美琴.cloudns.org/audio/only_my_railgun.m4a" autoplay loop></audio>
     </div>
     `);
 
