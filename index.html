@@ -166,17 +166,23 @@
             </div>
             <div id="my_amateur_radio_image">
                 <img src="https://file-1.御坂网络.100320721.xyz/image/other/ham/device/main-a-1.png">
+                <img src="https://file-1.御坂网络.100320721.xyz/image/other/ham/other/gd-1.png">
+                <img src="https://file-1.御坂网络.100320721.xyz/image/other/ham/other/gd-2.png">
+                <img src="https://file-1.御坂网络.100320721.xyz/image/other/ham/device/main-a-2.png">
             </div>
             <style>
                 #my_amateur_radio_image {
                     width: 80%;
-                    display: block;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
                     margin: auto;
-                    text-align: center;
                 }
 
                 #my_amateur_radio_image img {
-                    width: 48%;
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
                 }
             </style>
         </div>
