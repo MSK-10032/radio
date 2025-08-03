@@ -31,7 +31,7 @@ document.querySelector('body').insertAdjacentHTML('beforeend', `
                 padding: 0;
             }
         </style>
-        <audio src="https://file-1.御坂网络.100320721.xyz/audio/only_my_railgun.m4a" autoplay loop></audio>
+        <audio src="https://file-1.御坂网络.100320721.xyz/audio/level5_-judgelight-.m4a" autoplay loop></audio>
     </div>
     `);
 
