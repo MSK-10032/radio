@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>eQSL - CMSK</title>
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+    <link rel="icon" href="https://file-1.御坂网络.100320721.xyz/image/other/scp/logo/default-b.png">
+    <link rel="stylesheet" href="/style/all.css">
+    <link rel="stylesheet" href="/style/eqsl.css">
+    <link rel="stylesheet" href="/style/background.css">
+    <script src="/script/all.js"></script>
+    <!-- <script src="/script/bgm.js" defer></script> -->
+    <!-- <script src="/script/qrcode.js"></script> -->
+    <!-- <script src="https://file-1.御坂网络.100320721.xyz/script/jszip.js"></script> -->
+    <!-- <script src="https://file-1.御坂网络.100320721.xyz/script/media-player.js"></script> -->
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.querySelector("link[rel='icon']").href = "https://file-1.御坂网络.100320721.xyz/image/other/scp/logo/default-w.png";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="gbg"></div>
+    <!-- main -->
+    <main>
+        <div id="title-main">eQSL Application</div>
+        <hr class="ch">
+        <input type="text" id="callsign-input" placeholder="Please input your callsign">
+        <br>
+        <div id="create-eqsl" onclick="create_eqsl(document.getElementById('callsign-input').value)">Create eQSL</div>
+        <hr class="ch">
+        <img id="eqsl_image" alt="eQSL Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-2/i.png">
+    </main>
+    <!-- Create eQSL Image -->
+    <script>
+        function create_eqsl(callsign) {
+            if (!callsign) {
+                alert("Please input your callsign first!");
+                return;
+            }
+            ImageAddText.addText({
+                image: 'https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-2/i.png',
+                text: [
+                    {
+                        text: callsign,
+                        x: 350,
+                        y: 700,
+                        color: "#000",
+                        size: 100
+                    },
+                    {
+                        text: "√",
+                        x: 1230,
+                        y: 2100,
+                        color: "#000",
+                        size: 100
+                    },
+                    {
+                        text: new Date().getFullYear(),
+                        x: 200,
+                        y: 920,
+                        color: "#000",
+                        size: 100
+                    },
+                    {
+                        text: new Date().getMonth() + 1,
+                        x: 750,
+                        y: 920,
+                        color: "#000",
+                        size: 100
+                    },
+                    {
+                        text: new Date().getDate(),
+                        x: 1100,
+                        y: 920,
+                        color: "#000",
+                        size: 100
+                    }
+                ]
+            }).then(data => {
+                eqsl_image.src = data;
+            });
+        }
+    </script>
+    <!-- footer -->
+    <footer>
+        <hr>
+        <copyright>
+            Copyright&copy;&nbsp;
+            <script>document.write(`${new Date().getFullYear()}&nbsp;`);</script>
+            <a href="https://github.com/MSK-10032/" target="_blank">CMSK.</a>&nbsp;All&nbsp;rights&nbsp;reserved.
+        </copyright>
+        <hr>
+        <style>
+            @font-face {
+                font-family: 'MC';
+                src: url('https://file-1.御坂网络.100320721.xyz/font/MC.ttf');
+            }
+
+            footer {
+                color: white;
+                text-align: center;
+                font-family: 'Microsoft YaHei Light', sans-serif;
+            }
+
+            footer copyright {
+                font-size: 20px;
+                font-weight: lighter;
+            }
+
+            footer copyright a {
+                color: white;
+                text-decoration: none;
+                font-family: "MC";
+            }
+        </style>
+    </footer>
+</body>
+
+</html>
