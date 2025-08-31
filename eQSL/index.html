@@ -65,8 +65,8 @@
                 alert("Callsign length should be between 5 and 10 characters!");
                 return;
             }
-            if (!/^[A-Za-z0-9]+$/.test(callsign)) {
-                alert("Callsign should only contain letters and numbers!");
+            if (!/^[A-Z0-9]+$/.test(callsign)) {
+                alert("Callsign should only contain uppercase letters and numbers!");
                 return;
             }
             ImageAddText.addText({
