@@ -61,8 +61,8 @@
                 alert("Please input your callsign first!");
                 return;
             }
-            if (callsign.length < 5 || callsign.length > 10) {
-                alert("Callsign length should be between 5 and 10 characters!");
+            if (callsign.length > 10) {
+                alert("Callsign is too long!");
                 return;
             }
             if (!/^[A-Z0-9]+$/.test(callsign)) {
