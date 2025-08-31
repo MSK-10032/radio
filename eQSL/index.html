@@ -22,6 +22,19 @@
 </head>
 
 <body>
+    <!-- eQSL List -->
+    <script>
+        eqsl_list = [2];
+    </script>
+    <!-- Select QSL Style -->
+    <script>
+        if (getURL("qsl-style") == "") {
+            location.search = "?qsl-style=2";
+        }
+        if (!eqsl_list.includes(parseInt(getURL("qsl-style")))) {
+            location.search = "?qsl-style=2";
+        }
+    </script>
     <div id="gbg"></div>
     <!-- main -->
     <main>
@@ -42,6 +55,7 @@
     </main>
     <!-- Create eQSL Image -->
     <script>
+        eqsl_image.src = `https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-${getURL("qsl-style")}/i.png`;
         function create_eqsl(callsign) {
             if (!callsign) {
                 alert("Please input your callsign first!");
@@ -56,7 +70,7 @@
                 return;
             }
             ImageAddText.addText({
-                image: 'https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-2/i.png',
+                image: `https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-${getURL("qsl-style")}/i.png`,
                 text: [
                     {
                         text: callsign,
