@@ -55,7 +55,8 @@
     </main>
     <!-- Create eQSL Image -->
     <script>
-        eqsl_image.src = `https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-${getURL("qsl-style")}/i.png`;
+        eqsl_image_url = `https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-${getURL("qsl-style")}/i.png`;
+        eqsl_image.src = eqsl_image_url;
         function create_eqsl(callsign) {
             if (!callsign) {
                 alert("Please input your callsign first!");
@@ -70,7 +71,7 @@
                 return;
             }
             ImageAddText.addText({
-                image: eqsl_image.src,
+                image: eqsl_image_url,
                 text: [
                     {
                         text: callsign,
