@@ -69,8 +69,18 @@ hr.ch {
     cursor: pointer;
 }
 
-#eqsl_image {
+#eqsl_image,
+.eqsl_image {
     width: 80%;
     margin: auto;
     display: block;
+}
+
+#eqsl-list img {
+    border-radius: 5px;
+    border: transparent 5px solid;
+}
+
+#eqsl-list img:hover {
+    border: #00FF00 5px solid;
 }
