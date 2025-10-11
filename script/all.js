@@ -36,19 +36,6 @@ function loadCSS(href) {
     document.getElementsByTagName("head")[0].appendChild(cssLink);
 }
 
-/* getPi */
-function getPi(pij) {
-    let pi = 0;
-    let denominator = 1;
-    let sign = 1;
-    for (let i = 0; i < pij; i++) {
-        pi += sign / denominator;
-        denominator += 2;
-        sign *= -1;
-    }
-    return pi * 4;
-}
-
 /* validateEmail */
 function check_email(email) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -173,4 +160,5 @@ class ImageAddText {
             img.src = url;
         });
     }
+
 }
