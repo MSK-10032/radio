@@ -31,7 +31,7 @@ document.querySelector('body').insertAdjacentHTML('beforeend', `
                 padding: 0;
             }
         </style>
-        <audio src="https://file-1.御坂网络.100320721.xyz/audio/恋ひ恋う縁.ogg" autoplay loop></audio>
+        <audio src="https://file-1.御坂网络.100320721.xyz/audio/phase_next.mp3" autoplay loop></audio>
     </div>
     `);
 
@@ -64,3 +64,4 @@ bgm.addEventListener("pause", updateBGMButton);
 bgm.play();
 
 updateBGMButton();
+
