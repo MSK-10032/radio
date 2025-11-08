@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>QSL Card - CMSK</title>
+    <title>QSL Card - Style:1 - CMSK</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/style/all.css">
     <style>
@@ -43,10 +43,10 @@
         <div class="card-container">
             <div class="card">
                 <div class="card-front">
-                    <img alt="QSL Card Front Image" title="QSL Card Front Image">
+                    <img alt="QSL Card Front Image" title="QSL Card Front Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/i.png">
                 </div>
                 <div class="card-back">
-                    <img alt="QSL Card Back Image" title="QSL Card Back Image">
+                    <img alt="QSL Card Back Image" title="QSL Card Back Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/o.png">
                 </div>
             </div>
         </div>
@@ -106,23 +106,15 @@
     </div>
     <!-- QSL Card Id -->
     <script>
-        var qcip = 'https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-',
-            cid = Number(location.search.replace(/^\?/, '')),
-            qc_f = document.querySelector('.card-front img'),
-            qc_b = document.querySelector('.card-back img');
-        if (cid === 0) {
-            cid = 1
-        }
-        qc_f.src = `${qcip}${cid}/i.png`;
-        qc_b.src = `${qcip}${cid}/o.png`;
         qc_f.onclick = function () {
-            window.open(`${qcip}${cid}/i.png`, '_blank');
+            window.open(this.src, '_blank');
         };
         qc_b.onclick = function () {
-            window.open(`${qcip}${cid}/o.png`, '_blank');
+            window.open(this.src, '_blank');
         };
     </script>
 </body>
 
 
 </html>
+
