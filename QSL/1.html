@@ -43,10 +43,10 @@
         <div class="card-container">
             <div class="card">
                 <div class="card-front">
-                    <img alt="QSL Card Front Image" title="QSL Card Front Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/i.png">
+                    <img alt="QSL Card Front Image" title="QSL Card Front Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/i.png" onclick="window.open(this.src, '_blank')">
                 </div>
                 <div class="card-back">
-                    <img alt="QSL Card Back Image" title="QSL Card Back Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/o.png">
+                    <img alt="QSL Card Back Image" title="QSL Card Back Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/o.png" onclick="window.open(this.src, '_blank')">
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
             .card-back {
                 position: absolute;
                 width: 100%;
-                /* height: 100%; */
+                height: 100%;
                 backface-visibility: hidden;
                 border-radius: 15px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -98,23 +98,15 @@
 
             .card img {
                 width: 100%;
-                /* height: 100%; */
+                height: 100%;
                 object-fit: cover;
                 border-radius: 15px;
             }
         </style>
     </div>
-    <!-- QSL Card Id -->
-    <script>
-        qc_f.onclick = function () {
-            window.open(this.src, '_blank');
-        };
-        qc_b.onclick = function () {
-            window.open(this.src, '_blank');
-        };
-    </script>
 </body>
 
 
 </html>
+
 
