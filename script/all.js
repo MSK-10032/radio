@@ -20,6 +20,19 @@ function ImageToBase64(url, callback) {
         .catch(error => console.error('Error converting image to base64:', error));
 }
 
+function Base64ToUTF8(b64) {
+    const binary = atob(b64);
+    const bytes = Uint8Array.from([...binary].map(c => c.charCodeAt(0)));
+    return new TextDecoder('utf-8').decode(bytes);
+}
+
+function UTF8ToBase64(str) {
+    const bytes = new TextEncoder().encode(str);
+    let binary = '';
+    for (let b of bytes) binary += String.fromCharCode(b);
+    return btoa(binary);
+}
+
 /* RandomInt */
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -160,5 +173,4 @@ class ImageAddText {
             img.src = url;
         });
     }
-
 }
