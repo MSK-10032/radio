@@ -40,6 +40,17 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getRandomIntByString(str, min, max) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+    hash = Math.abs(hash)
+    return Math.floor((hash % (max - min + 1)) + min);
+}
+
 /* LoadCSS */
 function loadCSS(href) {
     var cssLink = document.createElement("link");
