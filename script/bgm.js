@@ -1,4 +1,4 @@
-document.querySelector('body').insertAdjacentHTML('beforeend', `
+﻿document.querySelector('body').insertAdjacentHTML('beforeend', `
     <!-- BGM -->
     <div id="cmsk_bgm" title="BGM">
         <div class="bgm_button bgm_play" onclick="toggleBGM()">
@@ -16,8 +16,8 @@ document.querySelector('body').insertAdjacentHTML('beforeend', `
             #cmsk_bgm {
                 position: fixed;
                 z-index: 114;
-                top: 2vw;
-                left: 2vw;
+                bottom: 2vw;
+                right: 2vw;
                 display: flex;
                 align-items: center;
             }
@@ -62,7 +62,4 @@ bgm.addEventListener("play", updateBGMButton);
 bgm.addEventListener("pause", updateBGMButton);
 
 bgm.play();
-
 updateBGMButton();
-
-
