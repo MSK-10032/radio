@@ -185,3 +185,17 @@ class ImageAddText {
         });
     }
 }
+
+// Auto set iframe.height
+function bindIframeHeight(iframe) {
+  iframe.addEventListener('load', function() {
+    try {
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      const height = doc.body.scrollHeight;
+      iframe.style.height = height + 'px';
+    } catch (e) {
+      return;
+    }
+  });
+}
+document.querySelectorAll('iframe.max-height').forEach(bindIframeHeight);
