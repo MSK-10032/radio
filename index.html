@@ -13,10 +13,16 @@
     <!-- <script src="/script/qrcode.js"></script> -->
     <!-- <script src="https://file-1.御坂网络.100320721.xyz/script/jszip.js"></script> -->
     <!-- <script src="https://file-1.御坂网络.100320721.xyz/script/media-player.js"></script> -->
+    <script data-cfasync="false" defer>
+        if (location.pathname == '/') {
+            setTimeout(() => {
+                document.querySelector("loading").innerHTML = '';
+            }, 5000);
+        }
+    </script>
 </head>
 
 <body>
-    <script data-cfasync="false" src="https://file-1.御坂网络.100320721.xyz/script/loading/tpf-unb.js"></script>
     <!-- noscript -->
     <noscript class="noscript">
         <h2 class="noscript">
@@ -286,6 +292,4 @@
 </body>
 
 
-
 </html>
-
