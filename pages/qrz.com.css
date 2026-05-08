@@ -1,3 +1,36 @@
+::selection {
+    background: rgb(0, 255, 0);
+    color: black;
+}
+
+strong,
+* strong {
+    font-weight: bolder;
+    color: red;
+}
+
+/*---- SCROLLBAR ----*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF;
+    border-left: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CCC;
+    border: #333 1px solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #EEE;
+}
+
+/* main style */
 body {
     background-color: #000;
 }
+
