@@ -92,6 +92,7 @@
                         <div class="scanlines"></div>
                         <div class="vignette"></div>
                         <div class="content">
+                            <!-- Photos -->
                             <div class="line">
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
                                 <span class="typing-text">timg ~/photos/HAM/2026-05-05/*.jpg</span>
@@ -99,6 +100,21 @@
                             <div class="line line-image">
                                 <img src="https://www.qrz.com/hampages/ba4ihr/2026_05_05_1.jpg">
                             </div>
+                            <!-- Logbook -->
+                            <div class="line">
+                                <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
+                                <span class="typing-text">qrz --query logbook</span>
+                            </div>
+                            <div class="line line-image">
+                                <iframe id="logs" align="center" frameborder="0" width="640px" height="575px"
+                                    scrolling="no" src="https://logbook.qrz.com/lbstat/BA4IHR/"></iframe>
+                                <style>
+                                    #logs {
+                                        background: #FFF;
+                                    }
+                                </style>
+                            </div>
+                            <!-- New Line -->
                             <div class="line">
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
                                 <span class="cursor-i">█</span>
@@ -107,12 +123,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Logbook -->
-        <div class="i"></div>
-        <div id="logs">
-            <iframe align="center" frameborder="0" width="100%" height="600" scrolling="no"
-                src="https://logbook.qrz.com/lbstat/BA4IHR/"></iframe>
         </div>
     </main>
     <!-- footer -->
@@ -968,15 +978,6 @@
         height: 100%;
         object-fit: cover;
         border-radius: 15px;
-    }
-
-    /* logbook */
-    #logs {
-        width: 700px;
-        background-color: #73737373;
-        border-radius: 15px;
-        margin: auto;
-        margin-top: 5em;
     }
 </style>
 
