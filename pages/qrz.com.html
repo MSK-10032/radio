@@ -40,7 +40,7 @@
                                 <span class="cursor cursor-2">█</span>
                             </div>
                             <div class="line line-3 output-line">
-                                <span>. &nbsp;.. &nbsp;BA4IHR &nbsp;P.R.China &nbsp;<a href="#qsl">QSL</a> &nbsp;RIG &nbsp;ANT &nbsp;photos &nbsp;<a href="#logs">logs</a></span>
+                                <span>. &nbsp;.. &nbsp;.Ciallo~(∠・ω< )⌒★ &nbsp;BA4IHR &nbsp;P.R.China &nbsp;<a href="#qsl">QSL</a><br>RIG &nbsp;ANT &nbsp;photos &nbsp;<a href="#logs">logs</a></span>
                             </div>
                             <div class="line line-4">
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
@@ -55,6 +55,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Introduction -->
+        <div id="introduction">
+            <div class="cursor">█</div>
         </div>
         <!-- QSL Card -->
         <div id="qsl">
@@ -103,7 +107,7 @@
         </style>
     </footer>
 </body>
-
+<!-- Style -->
 <style>
     ::selection {
         background: rgb(0, 255, 0);
@@ -811,6 +815,36 @@
             font-size: 11px;
             top: 10px;
             left: 8px;
+        }
+    }
+
+    /* Introduction */
+    #introduction {
+        width: 80%;
+        margin: auto;
+    }
+
+    #introduction,
+    #introduction * {
+        color: #00ff00;
+        font-family: 'Courier New', 'Consolas', 'Monaco', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+    }
+
+    #introduction>.cursor {
+        animation: cursor 730ms infinite;
+    }
+
+    @keyframes cursor {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
         }
     }
 
