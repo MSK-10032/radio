@@ -103,7 +103,7 @@
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
                                 <span class="typing-text">timg ~/photos/HAM/2026-05-05/*.jpg</span>
                             </div>
-                            <div class="line line-image">
+                            <div class="line">
                                 <img src="https://www.qrz.com/hampages/ba4ihr/2026_05_05_1.jpg" alt="Network error, please reload the page!">
                             </div>
                             <!-- Logbook -->
@@ -111,7 +111,7 @@
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
                                 <span class="typing-text">qrz -callsign BA4IHR -query logbook</span>
                             </div>
-                            <div class="line line-image">
+                            <div class="line">
                                 <iframe id="logs" align="center" frameborder="0" scrolling="no"
                                     src="https://logbook.qrz.com/lbstat/BA4IHR/"></iframe>
                                 <style>
@@ -872,34 +872,6 @@
             top: 10px;
             left: 8px;
         }
-    }
-
-    .line-image {
-        position: relative;
-        display: inline-block;
-        overflow: hidden;
-    }
-
-    .line-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .line-image::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: repeating-linear-gradient(0deg,
-                transparent,
-                transparent 15px,
-                rgba(0, 0, 0) 30px,
-                rgba(0, 0, 0) 30px);
-        pointer-events: none;
-        z-index: 1;
     }
 
     /* Introduction */
