@@ -10,6 +10,7 @@
 <body>
     <!-- main -->
     <main>
+        <!--  -->
         <div id="m0">
             <div class="terminal-wrapper">
                 <div class="terminal">
@@ -39,7 +40,7 @@
                                 <span class="cursor cursor-2">█</span>
                             </div>
                             <div class="line line-3 output-line">
-                                <span>. &nbsp;.. &nbsp;BA4IHR &nbsp;P.R.China &nbsp;QSL &nbsp;RIG &nbsp;ANT &nbsp;photos &nbsp;<a href="#logs">logs</a></span>
+                                <span>. &nbsp;.. &nbsp;BA4IHR &nbsp;P.R.China &nbsp;<a href="#qsl">QSL</a> &nbsp;RIG &nbsp;ANT &nbsp;photos &nbsp;<a href="#logs">logs</a></span>
                             </div>
                             <div class="line line-4">
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
@@ -55,6 +56,20 @@
                 </div>
             </div>
         </div>
+        <!-- QSL Card -->
+        <div id="qsl">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img alt="QSL Card Front Image" title="QSL Card Front Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/i.png" onclick="window.open(this.src, '_blank')">
+                    </div>
+                    <div class="card-back">
+                        <img alt="QSL Card Back Image" title="QSL Card Back Image" src="https://file-1.御坂网络.100320721.xyz/image/other/ham/qsl/style-1/o.png" onclick="window.open(this.src, '_blank')">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Logbook -->
         <div id="logs">
             <iframe align="center" frameborder="0" width="100%" height="600" scrolling="no"
                 src="https://logbook.qrz.com/lbstat/BA4IHR/"></iframe>
@@ -797,6 +812,59 @@
             top: 10px;
             left: 8px;
         }
+    }
+
+    /* QSL Card */
+    .card-container {
+        perspective: 1000px;
+        width: 579.5px;
+        height: 353.6px;
+        margin: 100px auto;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: rotate 10s infinite linear;
+        cursor: pointer;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotateY(0deg);
+        }
+
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-front {
+        transform: rotateY(0deg);
+        z-index: 2;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
     }
 
     /* logbook */
