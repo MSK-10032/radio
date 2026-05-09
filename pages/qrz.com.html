@@ -40,7 +40,7 @@
                                 <span class="cursor cursor-2">█</span>
                             </div>
                             <div class="line line-3 output-line">
-                                <span>. &nbsp;.. &nbsp;.Ciallo~(∠・ω< )⌒★ &nbsp;BA4IHR &nbsp;P.R.China &nbsp;<a href="#qsl">QSL</a><br>RIG &nbsp;ANT &nbsp;photos &nbsp;<a href="#logs">logs</a></span>
+                                <span>. &nbsp;.. &nbsp;.Ciallo~(∠・ω< )⌒★ &nbsp;BA4IHR &nbsp;P.R.China &nbsp;<a href="#qsl">QSL</a><br>RIG &nbsp;ANT &nbsp;<a href="#photos">photos</a> &nbsp;<a href="#logs">logs</a></span>
                             </div>
                             <div class="line line-4">
                                 <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
@@ -57,8 +57,11 @@
             </div>
         </div>
         <!-- Introduction -->
-        <div id="introduction">
-            <div class="cursor">█</div>
+        <div id="introduction" class="i">
+            Hello, my call sign is BA4IHR. I come from China, QTH is located in
+            Jining,Shandong(OM85HK) / Liuzhou,Guangxi(OL44QG).
+            <br><br>
+            This is my QSL card.<span class="cursor-i">█</span>
         </div>
         <!-- QSL Card -->
         <div id="qsl">
@@ -73,7 +76,37 @@
                 </div>
             </div>
         </div>
+        <!-- Photos -->
+        <div id="photos">
+            <div class="terminal-wrapper">
+                <div class="terminal">
+                    <div class="title-bar">
+                        <div class="window-buttons">
+                            <span class="btn btn-close"></span>
+                            <span class="btn btn-minimize"></span>
+                            <span class="btn btn-maximize"></span>
+                        </div>
+                        <span class="title-text">ba4ihr@localhost: ~</span>
+                    </div>
+                    <div class="screen">
+                        <div class="scanlines"></div>
+                        <div class="vignette"></div>
+                        <div class="content">
+                            <div class="line">
+                                <span class="prompt">[ba4ihr@localhost ~]$&nbsp;</span>
+                                <span class="typing-text">timg ~/photos/HAM/2026-05-05/*.jpg</span>
+                                <span class="cursor-i">█</span>
+                            </div>
+                            <div class="line">
+                                <img src="https://www.qrz.com/hampages/ba4ihr/2026_05_05_1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Logbook -->
+        <div class="i"></div>
         <div id="logs">
             <iframe align="center" frameborder="0" width="100%" height="600" scrolling="no"
                 src="https://logbook.qrz.com/lbstat/BA4IHR/"></iframe>
@@ -820,17 +853,22 @@
 
     /* Introduction */
     #introduction {
-        width: 80%;
+        width: 650px;
         margin: auto;
     }
 
-    #introduction,
-    #introduction * {
+    /* .i */
+    .line>img {
+        width: 100%;
+    }
+
+    .i,
+    .i * {
         color: #00ff00;
         font-family: 'Courier New', 'Consolas', 'Monaco', 'Liberation Mono', 'DejaVu Sans Mono', monospace;
     }
 
-    #introduction>.cursor {
+    .cursor-i {
         animation: cursor 730ms infinite;
     }
 
@@ -903,8 +941,11 @@
 
     /* logbook */
     #logs {
+        width: 700px;
         background-color: #73737373;
         border-radius: 15px;
+        margin: auto;
+        margin-top: 5em;
     }
 </style>
 
